@@ -13,7 +13,7 @@
 <body>
     <header>
         <!-- navbar start -->
-        <section>
+        <section id="home-section">
             <div class="lg:w-[1170px] h-14 mx-auto">
                 <div class="flex">
                     <div class="">
@@ -47,8 +47,9 @@
                             results directly within the app. <br> The integrated testing features allow for a
                             streamlined.</p>
                         <button
-                            class="w-[170px] h-[65px] bg-[#1DD100] rounded-xl text-xl font-extrabold text-[#030712] mt-8 btn">Buy
-                            Tickets</button>
+                            class="w-[170px] h-[65px] bg-[#1DD100] rounded-xl text-xl font-extrabold text-[#030712] mt-8 btn"><a
+                                href="bus-info">Buy
+                                Tickets</a></button>
                     </div>
                 </div>
             </div>
@@ -108,7 +109,7 @@
 
         <!-- bus info start -->
         <section>
-            <div class="w-[1440px]  bg-[#F7F8F8] mx-auto mt-28 bus-info">
+            <div id="bus-info" class="w-[1440px]  bg-[#F7F8F8] mx-auto mt-28 bus-info">
                 <h2 class="text-center text-4xl font-bold text-[#030712] pt-28 pb-6">P.H Paribahan</h2>
                 <p class="text-center text-xl font-normal text-[#03071299]">Yes, you can run unit tests and view the
                     results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
@@ -194,26 +195,37 @@
                         <div class="flex justify-between">
                             <div class="flex mt-5 gap-1">
                                 <img class="w-7 h-7" src="./images/seat-green.png" alt="">
-                                <p>Available</p>
+                                <p class="text-xl text-[#03071280] font-medium">Available</p>
                             </div>
                             <div class="flex mr-8 mt-5 gap-1">
                                 <img class="w-7 h-7" src="./images/seat-green-filled.png" alt="">
-                                <p>Selected</p>
+                                <p class="text-[#1DD100] text-xl font-medium">Selected</p>
                             </div>
                         </div>
                         <div id="ticket-break" class="pl-8 mr-8 mt-5"></div>
                         <div class="w-[110px] h-14 mt-6 bg-[#0307121A] rounded-xl ml-[500px]">
                             <img class="pt-[15px] pl-[44px]" src="./images/stairing.png" alt="">
                         </div>
+                        <!-- seat number -->
                         <div>
-                            <div class="flex justify-center gap-1 my-1 w-full">
-                                <kbd class="kbd">w</kbd>
-                                <kbd class="kbd">q</kbd>
-                                <kbd class="kbd">e</kbd>
-                                <kbd class="kbd">r</kbd>
-                                <kbd class="kbd">t</kbd>
+                            <div class="flex mt-6 gap-1 my-1 w-full justify-between">
+                                <p class="text-xl font-medium text-[#03071280] mt-[15px]">A</p>
+                                <button onclick="selectSeat('A1')" id="A1" class="w-[80px] h-14 bg-[#F7F8F8]">A1</button>
+                                <button onclick="selectSeat('A2')" id="A2" class="w-[80px] h-14 bg-[#F7F8F8]">A2</button>
+                                <button onclick="selectSeat('A3')" id="A3" class="w-[80px] h-14 bg-[#F7F8F8]">A3</button>
+                                <button onclick="selectSeat('A4')" id="A4" class="w-[80px] h-14 bg-[#F7F8F8] mr-[34px]">A4</button>
+
+                            </div>
+                            <div class="flex mt-6 gap-1 my-1 w-full justify-between">
+                                <p class="text-xl font-medium text-[#03071280] mt-[15px]">B</p>
+                                <button onclick="selectSeat('B1')" id="B1" class="w-[80px] h-14 bg-[#F7F8F8]">B1</button>
+                                <button onclick="selectSeat('B2')" id="B2" class="w-[80px] h-14 bg-[#F7F8F8]">B2</button>
+                                <button onclick="selectSeat('B3')" id="B3" class="w-[80px] h-14 bg-[#F7F8F8]">B3</button>
+                                <button onclick="selectSeat('B4')" id="B4" class="w-[80px] h-14 bg-[#F7F8F8] mr-[34px]">B4</button>
+
                             </div>
                         </div>
+                        <!-- seat number end -->
                     </div>
                     <div id="divider">
 
@@ -224,8 +236,110 @@
                     <div class="pt-8 mr-8">
                         <h2 class="text-2xl font-semibold text-[#030712] ml-7">Select Your Seat</h2>
                         <div id="ticket2-break" class="pl-8 mr-14 ml-7 mt-5"></div>
+                        <div class="flex justify-between w-[435px] h-[335px] bg-[#F7F8F8] mx-auto rounded-xl mt-12">
+                            <div class="ml-8 mt-8">
+                                <p class="text-[16px] font-medium text-[#030712]">Seat</p>
+                            </div>
+                            <div class="mt-8">
+                                <p class="text-[16px] font-medium text-[#030712]">Class</p>
+                            </div>
+                            <div class="mr-8 mt-8">
+                                <p class="text-[16px] font-medium text-[#030712]">Price</p>
+                            </div>
+                        </div>
+                        <div id="total-break" class="ml-[63px] mt-[-260px]">
+
+                        </div>
+                        <div class="flex justify-between mt-4 mb-4">
+                            <div class="flex flex-col ml-16">
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">C2</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">C2</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">C2</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">C2</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">Economoy</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">Economoy</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">Economoy</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">Economoy</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col mr-16">
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">550</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">550</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">550</p>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-normal text-[#03071299]">550</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="total1-break" class="ml-[63px] pt-[-260px]">
+
+                        </div>
+                        <div class="flex justify-between mt-8">
+                            <div class="ml-16">
+                                <h3 class="text-[16px] font-medium text-[#030712]">Total Price</h3>
+                            </div>
+                            <div class="mr-16">
+                                <h3 class="text-[16px] font-medium text-[#030712]"><span
+                                        class="text-[16px] font-medium text-[#030712]">BDT</span> 2200</h3>
+                            </div>
+                        </div>
+                        <div class="ml-[64px] mt-[16px]">
+                            <input type="text" placeholder="Have any copupon?"
+                                class="input input-bordered w-[270px] h-[45px] bg-[#FFFFFF]" />
+                            <button class="btn  w-[92px] h-[40px] bg-[#1DD100] text-[#FFFFFF]">Apply</button>
+                        </div>
+                        <div class="flex justify-between mt-3">
+                            <div class="ml-16">
+                                <h3 class="text-[16px] font-medium text-[#030712]">Grand Total</h3>
+                            </div>
+                            <div class="mr-16">
+                                <h3 class="text-[16px] font-medium text-[#030712]"><span
+                                        class="text-[16px] font-medium text-[#030712]">BDT</span> 2200</h3>
+                            </div>
+                        </div>
+                        <!-- input field start -->
+                        <div class="mt-8 ml-[66px]">
+                            <h3 class="text-[16px] font-semibold text-[#030712] mb-4">Passenger Name*</h3>
+                            <input type="text" placeholder="Enter Your Name"
+                                class="input input-bordered w-full max-w-xs text-[16px] font-normal text-[#03071266]" />
+                            <h3 class="text-[16px] font-semibold text-[#030712] mb-4 mt-6">Phone Number*</h3>
+                            <input type="text" placeholder="Enter your phone number"
+                                class="input input-bordered w-full max-w-xs text-[16px] font-normal text-[#03071266]" />
+                            <h3 class="text-[16px] font-semibold text-[#030712] mb-4 mt-6">Email ID</h3>
+                            <input type="text" placeholder="Enter your email id"
+                                class="input input-bordered w-full max-w-xs text-[16px] font-normal text-[#03071266]" />
+                            <button
+                                class="btn btn-wide w-[433px] h=[65px] bg-[#1DD100] mt-6 rounded-xl text-xl font-extrabold text-[#FFFFFF]">Next</button>
+                        </div>
+                        <!-- input field end -->
 
                     </div>
+
+
                 </div>
             </div>
         </section>
@@ -236,8 +350,8 @@
     <footer>
 
     </footer>
-
-
+    <script src="./script/utility.js"></script>
+    <script src="./ticket.js"></script>
 </body>
 
 </html>

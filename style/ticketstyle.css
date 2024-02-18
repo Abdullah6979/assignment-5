@@ -46,3 +46,14 @@
     border: 1px dashed rgba(3, 7, 18, 0.2);
     width: 409px;
 }
+
+#total-break {
+    width: 369px;
+    border: 1px dashed rgba(3, 7, 18, 0.2);
+}
+
+#total1-break {
+    position: absolute;
+    width: 369px;
+    border: 1px dashed rgba(3, 7, 18, 0.2);
+}
