@@ -1,35 +1,32 @@
-
-var selectedSeats = [];
-var seatNumber = 1;
+let selectedSeats = [];
+let seatNumber = 1;
+let seatsLeft = 8;
 
 function selectSeat(seatId) {
-    var seatButton = document.getElementById(seatId);
+    const seatButton = document.getElementById(seatId);
     if (seatButton.classList.contains('selected')) {
         seatButton.classList.remove('selected');
         selectedSeats.splice(selectedSeats.indexOf(seatId));
-        
+        seatsLeft++;
     } else {
-        if (selectedSeats.length < 4) {
+        if (selectedSeats.length < 4 && seatsLeft > 0) {
             seatButton.classList.add('bg-green-500');
             selectedSeats.push(seatId);
-            
+            seatsLeft--;
         } else {
-            alert('You can only select up to 4 seats.');
+            alert('You can only select up to 4 seats and there are no more available seats.');
         }
     }
-    
     updateSelectedSeats();
+    updateSeatsLeft();
 }
 
-
-
 function updateSelectedSeats() {
-    var selectedSeatsElement = document.getElementById('selectedSeats');
+    const selectedSeatsElement = document.getElementById('selectedSeats');
     selectedSeatsElement.textContent = selectedSeats.length;
 }
 
-function updateSeatNumber(seatButton) {
-    seatButton.textContent += " (Seat " + seatNumber + ")";
-    seatNumber++;
+function updateSeatsLeft() {
+    const seatsLeftElement = document.getElementById('seatsLeft');
+    seatsLeftElement.textContent = seatsLeft;
 }
-
