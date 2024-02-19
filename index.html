@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/ticketstyle.css">
 
+</head>
 
 <body>
     <header>
@@ -342,7 +343,8 @@
                             <input type="text" placeholder="Enter your email id"
                                 class="input input-bordered w-full max-w-xs text-[16px] font-normal text-[#03071266]" />
                             <button
-                                class="btn btn-wide w-[433px] h=[65px] bg-[#1DD100] mt-6 rounded-xl text-xl font-extrabold text-[#FFFFFF]">Next</button>
+                                class="btn btn-wide w-[433px] h=[65px] bg-[#1DD100] mt-6 rounded-xl text-xl font-extrabold text-[#FFFFFF]"><a
+                                    href="http://127.0.0.1:5500/congrats.html">Next</a></button>
                         </div>
                         <!-- input field end -->
 
@@ -356,8 +358,32 @@
 
     </main>
 
-    <footer>
+    <footer class="w-[1180px] h-[390px] bg-[#030712] ml-[170px] text-white rounded">
 
+        <div class="flex justify-between ml-32 mr-32">
+            <div>
+                <h2 class="text-3xl text-[#FFFFFF] font-bold mb-4 mt-16">P-Ticket</h2>
+                <p class="text-xl font-normal">P-Ticket is a digital platform to make your daily commuting better.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4 mt-16">Download our app</h3>
+                <img src="./images/playstore.png" alt="">
+            </div>
+        </div>
+        <div id="footer-break" class="mt-12 ml-32 mr-32">
+
+        </div>
+        <div class="flex justify-between ml-32 mr-32">
+            <div>
+                <p class="text-xl font-normal text-[#FFFFFFB3] mt-20">Copyright @all rights reserved, P-Ticket services
+                    limited.2024</p>
+            </div>
+            <div class="grid grid-flow-col gap-3 mt-20">
+                <a class="link link-hover">Terms & condition</a>
+                <a class="link link-hover">Return & refund</a>
+                <a class="link link-hover">Privacy policy</a>
+            </div>
+        </div>
     </footer>
     <script src="./script/utility.js"></script>
     <script src="./ticket.js"></script>
