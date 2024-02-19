@@ -128,7 +128,8 @@
                             <div class="w-44 h-14 flex bg-[#1DD10026] mt-10 items-center justify-center rounded-2xl">
                                 <img class="w-5 h-5" src="./images/seat-green.png" alt="">
                                 <div class="justify-center items-center">
-                                    <p class="text-[#1DD100] text-[18px] font-medium"><span id="seatsLeft">8</span> Seats left</p>
+                                    <p class="text-[#1DD100] text-[18px] font-medium"><span id="seatsLeft">8</span>
+                                        Seats left</p>
                                 </div>
                             </div>
 
@@ -211,25 +212,25 @@
                             <div class="flex mt-6 gap-1 my-1 w-full justify-between">
                                 <p class="text-xl font-medium text-[#03071280] mt-[15px]">A</p>
                                 <button onclick="selectSeat('A1')" id="A1"
-                                    class="w-[80px] h-14 bg-[#F7F8F8]">A1</button>
+                                    class="w-[80px] h-14 bg-[#F7F8F8] cards">A1</button>
                                 <button onclick="selectSeat('A2')" id="A2"
-                                    class="w-[80px] h-14 bg-[#F7F8F8]">A2</button>
+                                    class="w-[80px] h-14 bg-[#F7F8F8] cards">A2</button>
                                 <button onclick="selectSeat('A3')" id="A3"
-                                    class="w-[80px] h-14 bg-[#F7F8F8]">A3</button>
+                                    class="w-[80px] h-14 bg-[#F7F8F8] cards">A3</button>
                                 <button onclick="selectSeat('A4')" id="A4"
-                                    class="w-[80px] h-14 bg-[#F7F8F8] mr-[34px]">A4</button>
+                                    class="w-[80px] h-14 bg-[#F7F8F8] mr-[34px] cards">A4</button>
 
                             </div>
                             <div class="flex mt-6 gap-1 my-1 w-full justify-between">
                                 <p class="text-xl font-medium text-[#03071280] mt-[15px]">B</p>
                                 <button onclick="selectSeat('B1')" id="B1"
-                                    class="w-[80px] h-14 bg-[#F7F8F8]">B1</button>
+                                    class="w-[80px] h-14 bg-[#F7F8F8] cards">B1</button>
                                 <button onclick="selectSeat('B2')" id="B2"
-                                    class="w-[80px] h-14 bg-[#F7F8F8]">B2</button>
+                                    class="w-[80px] h-14 bg-[#F7F8F8] cards">B2</button>
                                 <button onclick="selectSeat('B3')" id="B3"
-                                    class="w-[80px] h-14 bg-[#F7F8F8]">B3</button>
+                                    class="w-[80px] h-14 bg-[#F7F8F8] cards">B3</button>
                                 <button onclick="selectSeat('B4')" id="B4"
-                                    class="w-[80px] h-14 bg-[#F7F8F8] mr-[34px]">B4</button>
+                                    class="w-[80px] h-14 bg-[#F7F8F8] mr-[34px] cards">B4</button>
 
                             </div>
                         </div>
@@ -260,8 +261,8 @@
 
                         </div>
                         <div class="flex justify-between mt-4 mb-4">
-                            <div class="flex flex-col ml-16">
-                                <div>
+                            <div class="flex flex-col ml-16 seat-name">
+                                <!-- <div>
                                     <p class="text-xs font-normal text-[#03071299]">C2</p>
                                 </div>
                                 <div>
@@ -272,10 +273,10 @@
                                 </div>
                                 <div>
                                     <p class="text-xs font-normal text-[#03071299]">C2</p>
-                                </div>
+                                </div> -->
                             </div>
-                            <div class="flex flex-col">
-                                <div>
+                            <div class="flex flex-col seat-class">
+                                <!-- <div>
                                     <p class="text-xs font-normal text-[#03071299]">Economoy</p>
                                 </div>
                                 <div>
@@ -286,10 +287,10 @@
                                 </div>
                                 <div>
                                     <p class="text-xs font-normal text-[#03071299]">Economoy</p>
-                                </div>
+                                </div> -->
                             </div>
-                            <div class="flex flex-col mr-16">
-                                <div>
+                            <div class="flex flex-col mr-16 seat-prize">
+                                <!-- <div>
                                     <p class="text-xs font-normal text-[#03071299]">550</p>
                                 </div>
                                 <div>
@@ -300,7 +301,7 @@
                                 </div>
                                 <div>
                                     <p class="text-xs font-normal text-[#03071299]">550</p>
-                                </div>
+                                </div> -->
                             </div>
 
                         </div>
@@ -309,11 +310,11 @@
                         </div>
                         <div class="flex justify-between mt-8">
                             <div class="ml-16">
-                                <h3 class="text-[16px] font-medium text-[#030712]">Total Price</h3>
+                                <h3 class="text-[16px] font-medium text-[#030712] final-total">Total Price</h3>
                             </div>
                             <div class="mr-16">
-                                <h3 class="text-[16px] font-medium text-[#030712]"><span
-                                        class="text-[16px] font-medium text-[#030712]">BDT</span> 2200</h3>
+                                <h3 class="text-[16px] font-medium text-[#030712]"> <span id="final-number">0</span>
+                                </h3>
                             </div>
                         </div>
                         <div class="ml-[64px] mt-[16px]">
@@ -326,8 +327,7 @@
                                 <h3 class="text-[16px] font-medium text-[#030712]">Grand Total</h3>
                             </div>
                             <div class="mr-16">
-                                <h3 class="text-[16px] font-medium text-[#030712]"><span
-                                        class="text-[16px] font-medium text-[#030712]">BDT</span> 2200</h3>
+                                <h3 class="text-[16px] font-medium text-[#030712]"> <span id="grand-final">0</span></h3>
                             </div>
                         </div>
                         <!-- input field start -->
